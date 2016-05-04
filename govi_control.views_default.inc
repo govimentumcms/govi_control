@@ -31,13 +31,6 @@ function govi_control_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'field_contro_fecha_de_expedici_n',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-  );
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
@@ -98,9 +91,8 @@ function govi_control_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh ipsum, porta non vulputate a, egestas ac urna. Ut laoreet dapibus dolor, ac imperdiet purus rhoncus ut. Cras id cursus diam. Nunc auctor ultrices lectus eget ultricies. Etiam at neque felis. Quisque vel tortor sed lectus hendrerit eleifend. Suspendisse velit libero, placerat eleifend cursus eu, condimentum non dolor. Duis nulla purus, tempus eu ultrices ac, venenatis eget leo. Curabitur mi dui, posuere sed leo sed, blandit feugiat justo. Cras semper commodo orci sagittis suscipit.
-
-Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, enim non eleifend eleifend, justo mi pretium arcu, vitae tempor mauris velit vitae quam. Mauris nec ultrices urna, sed ullamcorper tellus. Suspendisse tempor suscipit pretium. Nullam laoreet pretium sem, eget scelerisque arcu malesuada eu. Proin mollis tristique sollicitudin. Quisque tempor consequat lacinia. Pellentesque venenatis sapien vel odio convallis, bibendum consectetur lorem faucibus. Pellentesque non nulla sem. Quisque porttitor enim id sollicitudin ultrices. Donec mauris eros, volutpat ornare laoreet a, dictum eu magna. Sed hendrerit, lorem eu bibendum congue, dolor dolor mollis felis, quis fringilla nunc neque a massa.';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh ipsum, porta non vulputate a, egestas ac urna. Ut laoreet dapibus dolor, ac imperdiet purus rhoncus ut. Cras id cursus diam. Nunc auctor ultrices lectus eget ultricies. Etiam at neque felis. Quisque vel tortor sed lectus hendrerit eleifend. Suspendisse velit libero, placerat eleifend cursus eu, condimentum non dolor. Duis nulla purus, tempus eu ultrices ac, venenatis eget leo. Curabitur mi dui, posuere sed leo sed, blandit feugiat justo. Cras semper commodo orci sagittis suscipit.';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -114,6 +106,88 @@ Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, en
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_rel'] = '';
+  /* Field: Content: Descripción */
+  $handler->display->display_options['fields']['field_control_descripcion']['id'] = 'field_control_descripcion';
+  $handler->display->display_options['fields']['field_control_descripcion']['table'] = 'field_data_field_control_descripcion';
+  $handler->display->display_options['fields']['field_control_descripcion']['field'] = 'field_control_descripcion';
+  $handler->display->display_options['fields']['field_control_descripcion']['label'] = '';
+  $handler->display->display_options['fields']['field_control_descripcion']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_control_descripcion']['element_label_colon'] = FALSE;
+  /* Field: Content: Periodicidad */
+  $handler->display->display_options['fields']['field_control_periodicidad']['id'] = 'field_control_periodicidad';
+  $handler->display->display_options['fields']['field_control_periodicidad']['table'] = 'field_data_field_control_periodicidad';
+  $handler->display->display_options['fields']['field_control_periodicidad']['field'] = 'field_control_periodicidad';
+  $handler->display->display_options['fields']['field_control_periodicidad']['label'] = '';
+  $handler->display->display_options['fields']['field_control_periodicidad']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_control_periodicidad']['element_label_colon'] = FALSE;
+  /* Field: Content: Archivo Adjunto */
+  $handler->display->display_options['fields']['field_control_archivo_adjunto']['id'] = 'field_control_archivo_adjunto';
+  $handler->display->display_options['fields']['field_control_archivo_adjunto']['table'] = 'field_data_field_control_archivo_adjunto';
+  $handler->display->display_options['fields']['field_control_archivo_adjunto']['field'] = 'field_control_archivo_adjunto';
+  $handler->display->display_options['fields']['field_control_archivo_adjunto']['label'] = '';
+  $handler->display->display_options['fields']['field_control_archivo_adjunto']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_control_archivo_adjunto']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_control_archivo_adjunto']['click_sort_column'] = 'fid';
+  /* Field: Content: Enlace externo */
+  $handler->display->display_options['fields']['field_control_enlace_externo']['id'] = 'field_control_enlace_externo';
+  $handler->display->display_options['fields']['field_control_enlace_externo']['table'] = 'field_data_field_control_enlace_externo';
+  $handler->display->display_options['fields']['field_control_enlace_externo']['field'] = 'field_control_enlace_externo';
+  $handler->display->display_options['fields']['field_control_enlace_externo']['label'] = '';
+  $handler->display->display_options['fields']['field_control_enlace_externo']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_control_enlace_externo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_control_enlace_externo']['click_sort_column'] = 'url';
+  /* Field: Content: Fecha de Expedición */
+  $handler->display->display_options['fields']['field_contro_fecha_de_expedici_n']['id'] = 'field_contro_fecha_de_expedici_n';
+  $handler->display->display_options['fields']['field_contro_fecha_de_expedici_n']['table'] = 'field_data_field_contro_fecha_de_expedici_n';
+  $handler->display->display_options['fields']['field_contro_fecha_de_expedici_n']['field'] = 'field_contro_fecha_de_expedici_n';
+  $handler->display->display_options['fields']['field_contro_fecha_de_expedici_n']['label'] = '';
+  $handler->display->display_options['fields']['field_contro_fecha_de_expedici_n']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_contro_fecha_de_expedici_n']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_contro_fecha_de_expedici_n']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  /* Field: Content: Clasificación */
+  $handler->display->display_options['fields']['field_control_clasificacion']['id'] = 'field_control_clasificacion';
+  $handler->display->display_options['fields']['field_control_clasificacion']['table'] = 'field_data_field_control_clasificacion';
+  $handler->display->display_options['fields']['field_control_clasificacion']['field'] = 'field_control_clasificacion';
+  $handler->display->display_options['fields']['field_control_clasificacion']['label'] = '';
+  $handler->display->display_options['fields']['field_control_clasificacion']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_control_clasificacion']['element_label_colon'] = FALSE;
+  /* Field: Content: Tipo de Informe de Gestión */
+  $handler->display->display_options['fields']['field_control_tipo_infor_gestion']['id'] = 'field_control_tipo_infor_gestion';
+  $handler->display->display_options['fields']['field_control_tipo_infor_gestion']['table'] = 'field_data_field_control_tipo_infor_gestion';
+  $handler->display->display_options['fields']['field_control_tipo_infor_gestion']['field'] = 'field_control_tipo_infor_gestion';
+  $handler->display->display_options['fields']['field_control_tipo_infor_gestion']['label'] = '';
+  $handler->display->display_options['fields']['field_control_tipo_infor_gestion']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_control_tipo_infor_gestion']['element_label_colon'] = FALSE;
+  /* Field: Content: Tipo de Recurso */
+  $handler->display->display_options['fields']['field_control_tipo_de_recurso']['id'] = 'field_control_tipo_de_recurso';
+  $handler->display->display_options['fields']['field_control_tipo_de_recurso']['table'] = 'field_data_field_control_tipo_de_recurso';
+  $handler->display->display_options['fields']['field_control_tipo_de_recurso']['field'] = 'field_control_tipo_de_recurso';
+  $handler->display->display_options['fields']['field_control_tipo_de_recurso']['label'] = '';
+  $handler->display->display_options['fields']['field_control_tipo_de_recurso']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_control_tipo_de_recurso']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'control' => 'control',
+  );
   $handler->display->display_options['path'] = 'transparencia/control';
 
   /* Display: Informes de gestión, evaluación y auditoria */
@@ -229,6 +303,12 @@ Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, en
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['table'] = 'field_data_field_control_tipo_de_recurso';
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['field'] = 'field_control_tipo_de_recurso';
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['exclude'] = TRUE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Fecha de Expedición -  start date (field_contro_fecha_de_expedici_n) */
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['id'] = 'field_contro_fecha_de_expedici_n_value';
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['table'] = 'field_data_field_contro_fecha_de_expedici_n';
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['field'] = 'field_contro_fecha_de_expedici_n_value';
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -350,6 +430,12 @@ Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, en
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['table'] = 'field_data_field_control_tipo_de_recurso';
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['field'] = 'field_control_tipo_de_recurso';
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['exclude'] = TRUE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Fecha de Expedición -  start date (field_contro_fecha_de_expedici_n) */
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['id'] = 'field_contro_fecha_de_expedici_n_value';
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['table'] = 'field_data_field_contro_fecha_de_expedici_n';
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['field'] = 'field_contro_fecha_de_expedici_n_value';
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['order'] = 'DESC';
   $handler->display->display_options['path'] = 'transparencia/control/reportes-control-interno';
 
   /* Display: Planes de mejoramiento */
@@ -448,6 +534,17 @@ Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, en
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['table'] = 'field_data_field_control_tipo_de_recurso';
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['field'] = 'field_control_tipo_de_recurso';
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['exclude'] = TRUE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Fecha de publicación (field_fecha_de_publicacion) */
+  $handler->display->display_options['sorts']['field_fecha_de_publicacion_value']['id'] = 'field_fecha_de_publicacion_value';
+  $handler->display->display_options['sorts']['field_fecha_de_publicacion_value']['table'] = 'field_data_field_fecha_de_publicacion';
+  $handler->display->display_options['sorts']['field_fecha_de_publicacion_value']['field'] = 'field_fecha_de_publicacion_value';
+  $handler->display->display_options['sorts']['field_fecha_de_publicacion_value']['order'] = 'DESC';
+  /* Sort criterion: Content: Fecha de Expedición -  start date (field_contro_fecha_de_expedici_n) */
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['id'] = 'field_contro_fecha_de_expedici_n_value';
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['table'] = 'field_data_field_contro_fecha_de_expedici_n';
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['field'] = 'field_contro_fecha_de_expedici_n_value';
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -711,6 +808,12 @@ Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, en
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['table'] = 'field_data_field_control_tipo_de_recurso';
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['field'] = 'field_control_tipo_de_recurso';
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['exclude'] = TRUE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Fecha de Expedición -  start date (field_contro_fecha_de_expedici_n) */
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['id'] = 'field_contro_fecha_de_expedici_n_value';
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['table'] = 'field_data_field_contro_fecha_de_expedici_n';
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['field'] = 'field_contro_fecha_de_expedici_n_value';
+  $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -900,9 +1003,7 @@ Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, en
     t('last »'),
     t('Praesent consequat interdum elit, at egestas urna fringilla vitae. Duis luctus finibus purus id iaculis. Nam mattis purus eu sapien efficitur vehicula. Fusce ultrices, nibh nec maximus sodales, lacus ligula viverra felis, sed posuere dui risus vel nisl. Morbi molestie dolor a turpis elementum, ut venenatis erat dapibus. Sed ullamcorper, orci tincidunt faucibus sollicitudin, mauris erat malesuada mauris, vel tincidunt leo enim eu mi. Nunc placerat molestie erat ac aliquam. Sed non justo orci. Ut tempor semper tincidunt. Sed felis leo, finibus eu risus et, porttitor consequat erat. Cras vehicula sem nec orci mattis porta.'),
     t('Control'),
-    t(' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh ipsum, porta non vulputate a, egestas ac urna. Ut laoreet dapibus dolor, ac imperdiet purus rhoncus ut. Cras id cursus diam. Nunc auctor ultrices lectus eget ultricies. Etiam at neque felis. Quisque vel tortor sed lectus hendrerit eleifend. Suspendisse velit libero, placerat eleifend cursus eu, condimentum non dolor. Duis nulla purus, tempus eu ultrices ac, venenatis eget leo. Curabitur mi dui, posuere sed leo sed, blandit feugiat justo. Cras semper commodo orci sagittis suscipit.
-
-Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, enim non eleifend eleifend, justo mi pretium arcu, vitae tempor mauris velit vitae quam. Mauris nec ultrices urna, sed ullamcorper tellus. Suspendisse tempor suscipit pretium. Nullam laoreet pretium sem, eget scelerisque arcu malesuada eu. Proin mollis tristique sollicitudin. Quisque tempor consequat lacinia. Pellentesque venenatis sapien vel odio convallis, bibendum consectetur lorem faucibus. Pellentesque non nulla sem. Quisque porttitor enim id sollicitudin ultrices. Donec mauris eros, volutpat ornare laoreet a, dictum eu magna. Sed hendrerit, lorem eu bibendum congue, dolor dolor mollis felis, quis fringilla nunc neque a massa.'),
+    t(' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh ipsum, porta non vulputate a, egestas ac urna. Ut laoreet dapibus dolor, ac imperdiet purus rhoncus ut. Cras id cursus diam. Nunc auctor ultrices lectus eget ultricies. Etiam at neque felis. Quisque vel tortor sed lectus hendrerit eleifend. Suspendisse velit libero, placerat eleifend cursus eu, condimentum non dolor. Duis nulla purus, tempus eu ultrices ac, venenatis eget leo. Curabitur mi dui, posuere sed leo sed, blandit feugiat justo. Cras semper commodo orci sagittis suscipit.'),
     t('Informes de gestión, evaluación y auditoria'),
     t('Nombre'),
     t('Descripción'),
