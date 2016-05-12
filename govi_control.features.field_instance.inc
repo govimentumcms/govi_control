@@ -75,7 +75,7 @@ function govi_control_field_default_field_instances() {
         'label' => 'above',
         'module' => 'file',
         'settings' => array(),
-        'type' => 'file_default',
+        'type' => 'file_url_plain',
         'weight' => 2,
       ),
       'teaser' => array(
