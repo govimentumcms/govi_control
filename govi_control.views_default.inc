@@ -15,7 +15,7 @@ function govi_control_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Control';
+  $view->human_name = '7. Control';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -83,9 +83,9 @@ function govi_control_views_default_views() {
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['vocabulary'] = 'control_clasificacion';
 
   /* Display: Control */
-  $handler = $view->new_display('page', 'Control', 'page');
+  $handler = $view->new_display('page', '10. Control', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Control';
+  $handler->display->display_options['title'] = '10. Control';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';

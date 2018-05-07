@@ -32,9 +32,9 @@ function govi_control_views_api($module = NULL, $api = NULL) {
 function govi_control_node_info() {
   $items = array(
     'control' => array(
-      'name' => t('Control'),
+      'name' => t('7. Control'),
       'base' => 'node_content',
-      'description' => t('Utilice este tipo de contenido para gestionar y clasificar los documentos relacionados con el control de la Entidad'),
+      'description' => t('Con este tipo de contenido puede gestionar Informes de gestión, evaluación y auditoría, Reportes de control interno, Planes de mejoramiento, Entes de control que vigilan a la entidad y mecanismos de supervisión, Información para población vulnerable y Defensa judicial de la Entidad.'),
       'has_title' => '1',
       'title_label' => t('Titulo'),
       'help' => '',
